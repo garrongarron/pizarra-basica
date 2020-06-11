@@ -1,0 +1,191 @@
+html {
+  font-size: 15px; }
+
+.notScroll {
+  overflow: hidden !important;
+  position: relative !important; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #336633;
+  overflow: scroll;
+  font-size: 15px;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+  body .nav, body .navButtom {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    height: 2em; }
+    body .nav .tool, body .navButtom .tool {
+      background-color: buttonface;
+      position: fixed;
+      right: 0;
+      top: 0;
+      font-size: 1rem;
+      height: 2em;
+      margin: 0px;
+      padding: 0 .5em;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      align-items: center; }
+      body .nav .tool span, body .navButtom .tool span {
+        display: block;
+        padding-left: .25em; }
+      body .nav .tool svg, body .navButtom .tool svg {
+        font-size: 1em; }
+    body .nav ul.horizontal, body .navButtom ul.horizontal {
+      height: 2em;
+      background-color: gray;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
+      align-items: center; }
+      body .nav ul.horizontal li, body .navButtom ul.horizontal li {
+        cursor: default;
+        user-select: none;
+        padding: 0 .5em;
+        height: 2em;
+        line-height: 2em; }
+      body .nav ul.horizontal li:hover, body .navButtom ul.horizontal li:hover {
+        background-color: gray;
+        background-color: buttonface; }
+      body .nav ul.horizontal .ok, body .navButtom ul.horizontal .ok {
+        margin-left: auto; }
+      body .nav ul.horizontal .InputText, body .navButtom ul.horizontal .InputText {
+        border-radius: none;
+        background-color: white; }
+      body .nav ul.horizontal .jscolor, body .navButtom ul.horizontal .jscolor {
+        width: 4em; }
+    body .nav ul.navListNode, body .navButtom ul.navListNode {
+      z-index: 100;
+      list-style: none;
+      margin: 0;
+      position: fixed;
+      top: 2rem;
+      background-color: gray;
+      color: white;
+      display: flex;
+      flex-flow: column;
+      height: auto;
+      padding: 0em; }
+      body .nav ul.navListNode li, body .navButtom ul.navListNode li {
+        cursor: default;
+        padding: .5em; }
+      body .nav ul.navListNode li:hover, body .navButtom ul.navListNode li:hover {
+        background-color: gray;
+        background-color: buttonface; }
+  body .navButtom {
+    bottom: 0; }
+    body .navButtom ul.navListNode {
+      top: unset;
+      bottom: 2rem; }
+
+#pizarra-basica {
+  width: 2000px;
+  height: 2000px; }
+  #pizarra-basica svg {
+    cursor: pointer; }
+
+/*Verificar donde se usa*/
+.grid {
+  left: 0px;
+  top: 2em;
+  position: absolute;
+  z-index: -1; }
+
+.hide {
+  display: none !important; }
+
+.points .p1, .points .p2, .points .p3, .points .p4 {
+  position: absolute;
+  width: .5em;
+  height: .5em;
+  margin: -.25em;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  background-color: #00ff00;
+  z-index: 101;
+  cursor: pointer; }
+
+.points .p2 {
+  background-color: #ffff00; }
+
+.points .p3 {
+  background-color: #00ff00; }
+
+.points .p4 {
+  background-color: #66ccff;
+  left: -100px;
+  top: -100px; }
+
+.KeyBoardContainer {
+  bottom: 2em;
+  width: 100%;
+  position: fixed; }
+  @media (min-width: 900px) {
+    .KeyBoardContainer {
+      display: flex;
+      justify-content: center; } }
+  @media (max-width: 900px) {
+    .KeyBoardContainer {
+      overflow-x: scroll; } }
+  .KeyBoardContainer .KeyBoard {
+    background-color: buttonface;
+    padding: .5em 0em;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray; }
+    @media (min-width: 900px) {
+      .KeyBoardContainer .KeyBoard {
+        font-size: 1em;
+        width: 100%; } }
+    @media (max-width: 900px) {
+      .KeyBoardContainer .KeyBoard {
+        width: fit-content; } }
+    .KeyBoardContainer .KeyBoard .btn-name {
+      padding: 0em;
+      text-align: center;
+      user-select: none;
+      color: black;
+      font-size: .5em;
+      /* display: none; */ }
+    .KeyBoardContainer .KeyBoard .btn-content, .KeyBoardContainer .KeyBoard .btn-menu {
+      border: 1px solid gray;
+      /* border-radius: 50%; */
+      margin: .1em;
+      width: 1.3em;
+      height: 1.3em;
+      text-align: center;
+      user-select: none;
+      color: gray;
+      background-color: white;
+      line-height: 1.3em;
+      font-weight: bolder; }
+
+.display {
+  position: fixed;
+  width: 100%;
+  display: block;
+  left: 0;
+  bottom: 3em;
+  text-align: center; }
+  .display > div {
+    background-color: black;
+    color: white;
+    display: inline;
+    font-size: 1.5em;
+    padding: .25em .5em; }
