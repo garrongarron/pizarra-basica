@@ -1,0 +1,537 @@
+body {
+  margin: 0em;
+  padding: 0em;
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: #336633; }
+  body .topBar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    height: 3em;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    body .topBar .topLeft {
+      display: flex;
+      align-items: center; }
+      body .topBar .topLeft div {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      body .topBar .topLeft .logo {
+        height: 2em;
+        width: 2em; }
+      body .topBar .topLeft .title {
+        padding: 0em .5em;
+        font-size: 1.3em;
+        color: #333333; }
+    body .topBar .topRight {
+      margin-right: .5em;
+      display: flex;
+      align-items: center; }
+      body .topBar .topRight .more {
+        margin: 0em .5em;
+        width: 2em;
+        height: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #333333; }
+        body .topBar .topRight .more > svg {
+          font-size: 1.5em; }
+        body .topBar .topRight .more:hover {
+          background-color: #cccccc; }
+        body .topBar .topRight .more .fileMenu {
+          z-index: 1;
+          font-size: 1rem;
+          position: absolute;
+          background-color: white;
+          top: 3em;
+          border: 1px solid #cccccc; }
+          body .topBar .topRight .more .fileMenu ul {
+            list-style: none;
+            margin: 0em;
+            padding: 0em; }
+            body .topBar .topRight .more .fileMenu ul li {
+              padding: .5em 1em;
+              margin: .25em;
+              display: flex;
+              align-items: center; }
+              body .topBar .topRight .more .fileMenu ul li:hover {
+                background-color: #cccccc; }
+              body .topBar .topRight .more .fileMenu ul li svg {
+                margin-right: .5em; }
+      body .topBar .topRight .avatar {
+        width: 2em;
+        height: 2em;
+        background-color: #333333;
+        border-radius: 50%; }
+      body .topBar .topRight .shareBtn {
+        background-color: #4285f4;
+        color: white;
+        padding: .5em;
+        padding-right: .75em;
+        display: flex;
+        align-items: center;
+        margin-right: .5em;
+        border-radius: 2px; }
+        body .topBar .topRight .shareBtn svg {
+          margin-right: .5em; }
+  body .navBar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 3em;
+    height: 2em;
+    color: gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: space-between; }
+    body .navBar ul {
+      margin: 0em;
+      padding: 0em;
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0em 1em;
+      user-select: none; }
+      body .navBar ul li {
+        width: 2em;
+        height: 1.5em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      body .navBar ul li.selected {
+        color: #333333; }
+    body .navBar ul.btnOkCancel li {
+      border: 1px solid #cccccc;
+      margin: 0em .5em;
+      width: 3em;
+      border-radius: 2px; }
+    body .navBar ul.btnOkCancel li:hover {
+      background-color: #cccccc;
+      color: white; }
+  body .leftBar {
+    position: fixed;
+    background-color: white;
+    width: 2.5em;
+    left: .5em;
+    border-radius: 22.5px; }
+    body .leftBar ul {
+      margin: .25em;
+      padding: 0em;
+      list-style: none;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: .25em 0em;
+      user-select: none; }
+      body .leftBar ul li {
+        height: 2em;
+        width: 100%;
+        line-height: 2em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        body .leftBar ul li.selected {
+          border-radius: 50%;
+          background-color: #333333;
+          color: #cccccc; }
+  body .textEditorSubMenu {
+    position: fixed;
+    left: 3.5em;
+    top: 5em; }
+    body .textEditorSubMenu div {
+      position: absolute;
+      left: 0em;
+      height: 2em;
+      width: 2em;
+      background-color: white;
+      color: #333333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body .textEditorSubMenu div:nth-child(2) {
+      left: 2.5em; }
+  body .chanelContainer {
+    display: flex;
+    justify-content: center; }
+    body .chanelContainer ul.menu {
+      margin: 0 auto;
+      background-color: white;
+      position: fixed;
+      list-style: none;
+      padding: .1em .1em;
+      top: 6em;
+      border: 1px solid #eeeeee;
+      border-right: 1px solid gray;
+      border-bottom: 1px solid gray;
+      color: #333333; }
+      body .chanelContainer ul.menu li {
+        padding: .2em;
+        margin: .2em;
+        border: 1px solid #eeeeee;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        cursor: pointer; }
+      body .chanelContainer ul.menu li:hover {
+        border: 1px solid #333333; }
+  body .floatMenu {
+    position: fixed;
+    width: 2em;
+    right: .5em; }
+    body .floatMenu > ul.icons {
+      margin: 0em;
+      padding: 0em;
+      list-style: none;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      user-select: none; }
+      body .floatMenu > ul.icons > li {
+        background-color: white;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        margin: .25em 0em;
+        border-radius: 50%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center; }
+      body .floatMenu > ul.icons > li.selected {
+        color: #4285f4;
+        font-weight: bold; }
+    body .floatMenu > ul.weightList {
+      position: fixed;
+      top: 35%;
+      right: 3em;
+      list-style: none;
+      padding: .1em;
+      margin: 0em;
+      cursor: pointer; }
+      body .floatMenu > ul.weightList li {
+        padding: .5em;
+        width: 4em;
+        border: 1px solid #cccccc;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        cursor: pointer; }
+      body .floatMenu > ul.weightList li:hover {
+        color: #cccccc;
+        border: 1px solid gray; }
+        body .floatMenu > ul.weightList li:hover div {
+          border-color: #cccccc !important; }
+    body .floatMenu > ul.sizeList {
+      position: fixed;
+      top: 35%;
+      right: 3em;
+      list-style: none;
+      padding: .1em;
+      margin: 0em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      cursor: pointer; }
+      body .floatMenu > ul.sizeList li {
+        padding: .5em;
+        border: 1px solid #cccccc;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        body .floatMenu > ul.sizeList li div {
+          text-align: center; }
+      body .floatMenu > ul.sizeList li:hover {
+        color: #cccccc;
+        border: 1px solid gray; }
+    body .floatMenu ul.colorList {
+      position: fixed;
+      top: 35%;
+      right: 3em;
+      list-style: none;
+      background-color: buttonface;
+      display: grid;
+      max-width: 10em;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: .1em;
+      margin: 0em;
+      padding: .1em;
+      border: 1px solid #444444;
+      border-radius: .5em;
+      cursor: pointer; }
+    body .floatMenu ul.colorList li {
+      width: 1em;
+      height: 1em;
+      border: 1px solid #444444;
+      border-radius: 50%; }
+  body .popUpContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh; }
+  body .backGround {
+    background-color: #333333;
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; }
+  body .popUp {
+    position: relative;
+    background-color: white;
+    background-color: none;
+    background-color: rgba(10, 10, 10, 0.5);
+    width: 496px;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1; }
+    body .popUp .top {
+      background-color: white;
+      height: 4em;
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0em .5em; }
+      body .popUp .top .title {
+        font-size: 1.5em; }
+    body .popUp .center {
+      background-color: none;
+      height: 8em;
+      box-sizing: border-box; }
+      body .popUp .center textarea {
+        border: none;
+        margin: none;
+        padding: none;
+        box-sizing: border-box;
+        padding: .5em;
+        letter-spacing: .2px;
+        outline: none;
+        overflow: hidden;
+        resize: none;
+        width: 100%;
+        height: 100%;
+        background-color: none;
+        background-color: rgba(0, 0, 255, 0);
+        color: white; }
+    body .popUp .button {
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      height: 4em;
+      padding: 0em .5em; }
+      body .popUp .button div {
+        margin: 0em .5em;
+        border: 1px solid gray;
+        padding: .25em;
+        border-radius: 2px;
+        min-width: 4em;
+        text-align: center; }
+  body .searchResult {
+    position: fixed;
+    z-index: -1;
+    top: 0em;
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    border-top: 6em solid red;
+    padding: 3em;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1em; }
+    @media (min-width: 34em) {
+      body .searchResult {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 51em) {
+      body .searchResult {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 68em) {
+      body .searchResult {
+        grid-template-columns: repeat(4, 1fr); } }
+    body .searchResult .card {
+      width: 15em;
+      margin: auto;
+      height: 10em;
+      box-sizing: border-box;
+      border: 1px solid #cccccc;
+      border-radius: 5px; }
+      body .searchResult .card .miniature {
+        width: 100%;
+        height: 6.5em;
+        background-color: #336633;
+        cursor: pointer;
+        border-radius: 5px 5px 0 0; }
+      body .searchResult .card .buttonBar {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        body .searchResult .card .buttonBar .name {
+          font-weight: bold;
+          font-size: .8em;
+          padding: 0em .5em;
+          padding-top: .25em;
+          grid-column: 1/3;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          box-sizing: border-box;
+          height: 1.5em; }
+        body .searchResult .card .buttonBar .date {
+          align-self: center;
+          font-style: italic;
+          padding-left: .5em;
+          padding-top: .25em;
+          font-size: .8em;
+          display: flex;
+          flex-flow: row; }
+          body .searchResult .card .buttonBar .date div {
+            padding-left: .5em; }
+        body .searchResult .card .buttonBar .more {
+          justify-self: right;
+          margin: 0em .5em;
+          width: 2em;
+          height: 2em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: #333333;
+          position: relative; }
+          body .searchResult .card .buttonBar .more > svg {
+            font-size: 1.5em; }
+          body .searchResult .card .buttonBar .more:hover {
+            background-color: #cccccc; }
+  body .inputComponent {
+    background-color: #cccccc;
+    padding: .25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; }
+    body .inputComponent input {
+      border: none;
+      background: transparent;
+      outline: none;
+      box-sizing: border-box; }
+  body .cursorH, body .cursorV {
+    position: fixed;
+    background-color: red;
+    opacity: .2;
+    width: 2000px;
+    height: 2px;
+    position: fixed;
+    top: 100px;
+    left: 100px !important; }
+  body .cursorV {
+    width: 2px;
+    height: 2000px; }
+  body .points .p1, body .points .p2, body .points .p3, body .points .p4 {
+    position: absolute;
+    width: .5em;
+    height: .5em;
+    margin: -.25em;
+    left: -100px;
+    top: -100px;
+    border-radius: 50%;
+    background-color: #ff00ff;
+    z-index: 1;
+    cursor: pointer; }
+  body .points .p2 {
+    background-color: #ffff00; }
+  body .points .p3 {
+    background-color: #00ff00; }
+  body .points .p4 {
+    background-color: #66ccff; }
+  body .pushPin {
+    z-index: -1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    font-size: 1em;
+    color: yellow;
+    text-shadow: 2px 2px #ff0000; }
+    body .pushPin.red {
+      color: red !important; }
+  body .KeyBoardContainer {
+    bottom: 0em;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; }
+    body .KeyBoardContainer .KeyBoard {
+      padding: .5em 0em;
+      font-size: 2em;
+      font-size: 1em;
+      width: 100%;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body .KeyBoardContainer .KeyBoard .btn-name {
+        padding: 0em;
+        text-align: center;
+        user-select: none;
+        color: white;
+        font-size: .5em;
+        /* display: none; */ }
+      body .KeyBoardContainer .KeyBoard .btn-content, body .KeyBoardContainer .KeyBoard .btn-menu {
+        border: 1px solid buttonface;
+        /* border-radius: 50%; */
+        margin: .1em;
+        width: 1.3em;
+        height: 1.3em;
+        border-radius: 50%;
+        text-align: center;
+        user-select: none;
+        color: #333333;
+        background-color: white;
+        line-height: 1.3em;
+        font-weight: bolder; }
+  body svg text, body svg path, body svg rect, body svg ellipse {
+    user-select: none; }
+  body .display {
+    position: fixed;
+    width: 100%;
+    display: block;
+    left: 0;
+    bottom: 3em;
+    text-align: center; }
+    body .display > div {
+      background-color: black;
+      color: white;
+      display: inline;
+      font-size: 1.5em;
+      padding: .25em .5em;
+      line-height: 1.6em; }
+  body .subtitleLog {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    background-color: royalblue;
+    display: none; }
+
+.hide {
+  display: none !important; }
